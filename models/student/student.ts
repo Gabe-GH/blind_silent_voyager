@@ -1,12 +1,5 @@
 import { validatePassword, validateEmail } from "../../util/validator/validator";
 
-// interface Student {
-//     name: string;
-//     email: string;
-//     password: string;
-//     favProfs: Array<string>;
-// }
-
 class Student {
     private _name: string;
     private _email: string;
@@ -62,10 +55,8 @@ class Student {
 
     set password(password: string) {
         try{
-            if(validatePassword(password)){
-                console.log(`i'm here`)
+            if(validatePassword(password))
                 this._password = password
-            }
         }
         catch(e){
             throw e
